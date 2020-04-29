@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8"/>
+        <script type="text/javascript" src="./simple_roulette.js"></script>
+        <title>シンプルルーレット</title>
+    </head>
+    <body onLoad="makeCanvas()">
+        <canvas id="canvas" width="600" height="600"></canvas>
+        <p><label>作成したい項目数を入力：<br><input type="number" placeholder="default:3" name="num" id="num"/></p>
+        <p><input type="button" value="ルーレット作成" id="make_roulette" onclick="drawRoulette()"></p>
+        <p><input type="button" value="スタート" id="start" onclick="OnButtonClick()"></p>
+        <p><input type="button" value="ストップ" id="stop" onclick="OnButtonClick()"></p>    
+        <div id="div"></div>
+    </body>
+</html>
