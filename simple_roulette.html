@@ -1,15 +1,25 @@
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8"/>
-        <script type="text/javascript" src="./simple_roulette.js"></script>
+        <link rel="stylesheet" href="simple_roulette.css">
         <title>シンプルルーレット</title>
+        <!-- Use jQuery --> 
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+            crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" src="./simple_roulette.js"></script>
     </head>
-    <body onLoad="makeCanvas()">
-        <canvas id="canvas" width="600" height="600"></canvas>
-        <p><label>作成したい項目数を入力：<br><input type="number" placeholder="default:3" name="num" id="num"/></p>
-        <p><input type="button" value="ルーレット作成" id="make_roulette" onclick="drawRoulette()"></p>
-        <p><input type="button" value="スタート" id="start" onclick="OnButtonClick()"></p>
-        <p><input type="button" value="ストップ" id="stop" onclick="OnButtonClick()"></p>    
-        <div id="div"></div>
+    
+    <body>
+        <div class=edits>
+        <label>作成したい項目数を入力：<br><input type="number" value="3" name="item_num" id="item_num"/></p>
+        <input type="button" value="ルーレット作成" id="make_roulette"><br>
+        </div>
+        <div class=layers>
+        <canvas id="background" width="600" height="600"></canvas>
+        <canvas id="roulette" width="600" height="600"></canvas>
+        <canvas id="text" width="600" height="600"></canvas>
+        </div>
     </body>
 </html>
