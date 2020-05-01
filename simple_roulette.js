@@ -12,7 +12,7 @@ jQuery(function(){
     const ARROW_HEIGHT = 30;
     const ARROW_WIDTH = 20;
     const ROULETTE_RADIUS = 200;
-
+ 
     const S = 1.0; //For HSV [0, 1]
     const V = 1.0; //For HSV [0, 1]
  
@@ -26,6 +26,12 @@ jQuery(function(){
     var handler;
     var text_stroke_color = 'rgb(0,0,0)';
     var text_fill_color = 'rgb(255,255,255)';
+    var use_audio = true;   // SE等を使用する場合はtrue、使用しない場合はfalse
+    if(use_audio){
+        var roullete_stop_audio = "../se/stop_roulette_1.mp3"  //example 
+        var music = new Audio(roullete_stop_audio);
+    }
+ 
     charactor_size = '17' //pt
     text_ctx.font = 'normal ' + charactor_size + 'pt Gosick';
     text_ctx.textBaseline = "bottom";
@@ -71,6 +77,9 @@ jQuery(function(){
         if(isRotateRoulette){
             isRotateRoulette=false;
             clearInterval(handler);
+            if(use_audio){
+                music.play()
+            }
         }
         else{
             isRotateRoulette=true;
