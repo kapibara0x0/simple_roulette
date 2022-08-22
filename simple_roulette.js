@@ -28,7 +28,7 @@ jQuery(function(){
     var text_fill_color = 'rgb(255,255,255)';
     var use_audio = true;   // SE等を使用する場合はtrue、使用しない場合はfalse
     if(use_audio){
-        var roullete_stop_audio = "../se/stop_roulette_1.mp3"  //example 
+        var roullete_stop_audio = "./se/stop_roulette.mp3"  //example 
         var music = new Audio(roullete_stop_audio);
     }
  
